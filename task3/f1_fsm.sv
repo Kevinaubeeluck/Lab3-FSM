@@ -8,7 +8,7 @@ module f1_fsm (
     typedef enum {S0,S1,S2,S3,S4,S5,S6,S7,S8} my_state;
     my_state current_state, next_state;
 
-    always_ff @(posedge clk, posedge rst)
+    always_ff @(posedge clk)
         if(rst)         current_state <= S0;
         else            current_state <= next_state;
 
